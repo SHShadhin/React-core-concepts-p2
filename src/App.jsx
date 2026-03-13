@@ -1,6 +1,6 @@
 
 import './App.css'
-
+import Counter from './Counter';
 function App() {
   function handleClick() {
     alert('Clicked')
@@ -19,6 +19,10 @@ function App() {
     <>
       <div>
         <h1>Get started React</h1> 
+
+        <Counter></Counter>
+
+
         <button onClick={handleClick}>Click Me</button>
         <button onClick={function handleClick2() {
           alert('Clicked 2')
