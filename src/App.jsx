@@ -4,20 +4,25 @@ import Counter from './Counter';
 import Users from './Users';
 import { Suspense } from 'react';
 import Friends from './Friends';
+import Posts from './Posts';
 
 // const fetchUsers = fetch('https://jsonplaceholder.typicode.com/users').then(
 //   res => res.json(),
 // );
-const fetchFriends = async() => {
-  const res = await fetch('https://jsonplaceholder.typicode.com/users');
+// const fetchFriends = async() => {
+//   const res = await fetch('https://jsonplaceholder.typicode.com/users');
+//   return res.json()
+// }
+
+const fetchPosts = async () => {
+  const res = await fetch('https://jsonplaceholder.typicode.com/posts');
   return res.json()
 }
 
-
 function App() {
 
-  const friendsPromise = fetchFriends();
-
+  // const friendsPromise = fetchFriends();
+  const postsPromise = fetchPosts();
   function handleClick() {
     alert('Clicked')
   }
@@ -42,8 +47,12 @@ function App() {
           <Users fetchUsers={fetchUsers}></Users>
         </Suspense> */}
 
-        <Suspense fallback={<h2>Friends are coming for treat</h2>}>
+        {/* <Suspense fallback={<h2>Friends are coming for treat</h2>}>
           <Friends friendsPromise={friendsPromise}></Friends>
+        </Suspense> */}
+
+        <Suspense fallback={<h3>Posts are coming.....</h3>}>
+          <Posts postsPromise={postsPromise}></Posts>
         </Suspense>
 
         <Batsman></Batsman>

@@ -8,7 +8,7 @@ export default function Counter() {
     const newCount = count + 1;
     setCount(newCount)
   }
-console.log(count)
+// console.log(count)
   const counterStyle = {
     border: '2px solid green',
     backgroundColor: 'teal',
