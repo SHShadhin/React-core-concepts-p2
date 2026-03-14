@@ -2,14 +2,11 @@ import { useState } from "react"
 
 export default function Counter() {
 
-  // const [count, setCount] = useState(0)
-  let count = 0;
+  const [count, setCount] = useState(0)
   const handleAdd = () => {
     // setCount(5)// setCount ekta function
-    count = count + 1;
-console.log(count);
-
-    // setCount(newCount)
+    const newCount = count + 1;
+    setCount(newCount)
   }
 console.log(count)
   const counterStyle = {

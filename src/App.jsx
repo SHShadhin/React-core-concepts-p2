@@ -1,4 +1,4 @@
-
+import Batsman from './Batsman';
 import './App.css'
 import Counter from './Counter';
 function App() {
@@ -19,7 +19,7 @@ function App() {
     <>
       <div>
         <h1>Get started React</h1> 
-
+        <Batsman></Batsman>
         <Counter></Counter>
 
 
